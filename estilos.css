@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(47, 35, 218);
+  color: white;
+  padding: 10px;
+
+}
+
+footer {
+  background-color: rgb(47, 35, 218);
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
+
+p {
+  text-align: center;
+}
+
+/* Para que todas las imágenes tengan el mismo tamaño */
+.imagen {
+  width: 400px;
+  height: 400px;
+
+}
+
+/* Para que las imágenes se muestren en columnas de a dos */
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imagen {
+  margin: 10px;
+
+}
+
+@media screen and (max-width: 600px) {
+  .imagen {
+    width: 100%;
+  }
+}
