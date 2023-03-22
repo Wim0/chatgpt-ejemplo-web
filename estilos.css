@@ -78,3 +78,15 @@ main {
     transform: rotateY(360deg);
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .imagen {
+    width: 100%;
+  }
+}
+
