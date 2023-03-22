@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Tremenda página</title>
-    <link rel="stylesheet" href="estilos.css">
-  </head>
-  <body>
-    <header>
-      <h1>The big UCM team</h1>
-    </header>
-    <main>
-      <div class="imagen">
-        <img src="img/dani.png" alt="dani">
-        <p>Dani</p>
-      </div>
-      <div class="imagen">
-        <img src="img/nacho.png" alt="matu">
-        <p>Nacho</p>
-      </div>
-      <div class="imagen">
-        <img src="img/segura.png" alt="nacho">
-        <p>Segura</p>
-      </div>
-      <div class="imagen">
-        <img src="img/matu.png" alt="segura">
-        <p>Matu</p>
-      </div>
-    </main>
-    <footer>
-      <p>© EL DANI CON LA IA WUAAAAAAA 2023</p>
-    </footer>
-  </body>
+
+<head>
+  <title>Tremenda página</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+  <header>
+    <h1>The big UCM team</h1>
+  </header>
+  <main>
+    <div class="imagen">
+      <img src="img/dani.png" alt="dani">
+      <p>Dani</p>
+    </div>
+    <div class="imagen">
+      <img src="img/nacho.png" alt="matu">
+      <p>Nacho</p>
+    </div>
+    <div class="imagen">
+      <img src="img/segura.png" alt="nacho">
+      <p>Segura</p>
+    </div>
+    <div class="imagen">
+      <img src="img/matu.png" alt="segura">
+      <p>Matu</p>
+    </div>
+  </main>
+  <footer>
+    <p>© EL DANI CON LA IA WUAAAAAAA 2023</p>
+  </footer>
+  <script>
+    // Obtén todas las imágenes dentro de elementos con la clase "imagen"
+    const imagenes = document.querySelectorAll('.imagen img');
+
+    // Agrega un event listener a cada imagen
+    imagenes.forEach(imagen => {
+      imagen.addEventListener('mouseover', () => {
+        // Agrega la clase CSS "girar" a la imagen al pasar el mouse sobre ella
+        imagen.classList.add('girar');
+
+        // Elimina la clase CSS "girar" después de 1 segundo para volver a su estado normal
+        setTimeout(() => {
+          imagen.classList.remove('girar');
+        }, 1000);
+      });
+    });
+  </script>
+</body>
+
 </html>
