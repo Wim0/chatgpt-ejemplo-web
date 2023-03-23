@@ -1,32 +1,12 @@
+//Para poder guardar los comentarios
 const formulario = document.querySelector('#formulario');
 
-//Para poder guardar los comentarios
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const nombre = document.querySelector('#nombre').value;
     const comentario = document.querySelector('#comentario').value;
 
-    const data = {
-        nombre: nombre,
-        comentario: comentario
-    };
-
-    fetch('https://chatgpt-ejemplo-web-default-rtdb.firebaseio.com/comentarios.json', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error(error));
-});
-
-//Configuracion para envia los comentarios a firebase
-function enviarComentario(nombre, comentario) {
-    // Configurar la conexión a Firebase
     const firebaseConfig = {
         apiKey: "AIzaSyAlcCuGWisPalWxkiMUdQ-sabaddCOjdXQ",
         authDomain: "chatgpt-ejemplo-web.firebaseapp.com",
@@ -49,4 +29,7 @@ function enviarComentario(nombre, comentario) {
         .catch((error) => {
             console.error("Error al almacenar comentario: ", error);
         });
-}
+
+    // Resetear el formulario
+    formulario.reset();
+});
