@@ -12,6 +12,7 @@
     <h1>The big UCM team</h1>
   </header>
   <main>
+    <!--Para crear las imagenes y sus respectivos comentarios bajo ellas-->
     <div class="contenedor">
       <div class="imagen">
         <img src="img/dani.png" alt="dani">
@@ -44,8 +45,19 @@
         <p>Matu</p>
       </div>
     </div>
-  </main>
+    <!--Para crear la caja de envio de comentarios-->
+    <form action="comentarios.js" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" id="nombre">
 
+      <label for="comentario">Comentario:</label>
+      <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+
+      <input type="submit" value="Enviar">
+    </form>
+
+  </main>
+  <!--El footer-->
   <footer>
     <p>© EL DANI CON LA IA WUAAAAAAA 2023</p>
   </footer>
