@@ -12,7 +12,7 @@ formulario.addEventListener('submit', (e) => {
         comentario: comentario
     };
 
-    fetch('https://chatgpt-ejemplo-web-default-rtdb.firebaseio.com/', {
+    fetch('https://chatgpt-ejemplo-web-default-rtdb.firebaseio.com/comentarios.json', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
