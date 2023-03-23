@@ -10,6 +10,7 @@ formulario.addEventListener('submit', (e) => {
     const firebaseConfig = {
         apiKey: "AIzaSyAlcCuGWisPalWxkiMUdQ-sabaddCOjdXQ",
         authDomain: "chatgpt-ejemplo-web.firebaseapp.com",
+        databaseURL: "https://chatgpt-ejemplo-web-default-rtdb.firebaseio.com",
         projectId: "chatgpt-ejemplo-web",
         storageBucket: "chatgpt-ejemplo-web.appspot.com",
         messagingSenderId: "561045361208",
